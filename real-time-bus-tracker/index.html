@@ -1,0 +1,67 @@
+<!--*****************
+Real Time Bus Tracker
+******************-->
+
+<!-- Task: Animate the marker between the bus stops from MIT to Harvard. Use a customized version of mapbox and utilize MBTA bus data to determine the coordinates for each stops. 
+
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Real time bus tracker</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        button {
+            background-color: #645EFD;
+            border: none;
+            color: white;
+            padding: 13px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            letter-spacing: 0.025em;
+            border-radius: 4px;
+            font-weight: bold;
+            margin: 0 auto;
+            white-space: nowrap;
+            cursor: pointer;
+
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .map-overlay {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <div class="map-overlay">
+        <button onclick="move()">
+            View MIT—Harvard bus stops
+        </button>
+    </div>
+    <script src="mapanimation.js"></script>
+</body>
+
+</html>
